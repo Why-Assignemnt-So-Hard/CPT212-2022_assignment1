@@ -1,11 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-//class for counter
-class Counter{
-    int counter = 0;
-}
-
 public class BubbleSort {
     public static void main(String[] args) throws FileNotFoundException {
         Counter counter = new Counter();
