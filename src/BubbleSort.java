@@ -29,6 +29,7 @@ public class BubbleSort {
                 }
             }
         }
+        counter.counter++;             //return array
         return array;
     }
 
