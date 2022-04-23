@@ -39,14 +39,14 @@ public class BubbleSort {
 
     public static String[] readFile(String[] array, String fileName) throws FileNotFoundException {
         int i = 0;
-        FileInputStream fis = new FileInputStream(fileName);
-        Scanner sc = new Scanner(fis);
-        while(sc.hasNextLine())
+        FileInputStream file = new FileInputStream(fileName);
+        Scanner input = new Scanner(file);
+        while(input.hasNextLine())
         {
-            array[i] = sc.nextLine();
+            array[i] = input.nextLine();
             i++;
         }
-        sc.close();
+        input.close();
         return array;
     }
 }
