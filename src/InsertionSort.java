@@ -3,24 +3,35 @@ import java.util.*;
 
 public class InsertionSort {
     public static void main(String[] args) throws FileNotFoundException {
+        Counter counter = new Counter();
         String[] array = new String[100];
         readFile(array, "wordList100.txt");
-        String[] sortedArray = insertionSort(array, array.length);
+        String[] sortedArray = insertionSort(array, array.length, counter);
         for(int i = 0; i < sortedArray.length; i++){
             System.out.println(i + 1 + ".\t" + sortedArray[i]);
         }
+        System.out.println(counter.counter);
     }
 
-    public static String[] insertionSort(String[] array, int n) {
+    public static String[] insertionSort(String[] array, int n, Counter counter) {
+        counter.counter = 1;            //int i = 1
         for (int i = 1; i < n; ++i) {
+            counter.counter += 3;       //i < n and ++i
             String key = array[i];
+            counter.counter += 2;       //String key = array[i]
             int j = i - 1;
+            counter.counter += 2;       //int j = i - 1
             while (j >= 0 && array[i].compareToIgnoreCase(array[j]) > 0) {
+                counter.counter++;      //comparing array[i] with array[j]
                 array[j + 1] = array[j];
+                counter.counter += 4;   //comparing array[j+1] with array[j]
                 j = j - 1;
+                counter.counter += 2;   //j = j - 1
             }
             array[j + 1] = key;
+            counter.counter += 3;       //array[j + 1] = key
         }
+        counter.counter++;              //return array
         return array;
     }
 
