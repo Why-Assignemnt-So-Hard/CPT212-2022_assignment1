@@ -11,51 +11,42 @@ public class QuickSort {
         array[j] = temp;
     }
 
-    /* This function takes last element as pivot, places
-       the pivot element at its correct position in sorted
-       array, and places all smaller (smaller than pivot)
-       to left of pivot and all greater elements to right
-       of pivot */
-    static int partition(String[] array, int low, int high)
+    static int partition(String[] array, int low, int high, Counter counter)
     {
-        // pivot
+        counter.counter += 2;                                           // String pivot = array[high]
         String pivot = array[high];
-        // Index of smaller element and
-        // indicates the right position
-        // of pivot found so far
+        counter.counter += 2;                                           // int i = low - 1
         int i = low - 1;
+        counter.counter += 2;                                           // int j = low + 1
         for(int j = low + 1; j <= high - 1; j++)
         {
-            // If current element is smaller
-            // than the pivot
+            counter.counter += 3;                                       // j <= high - 1 and j++
             if (array[j].compareToIgnoreCase(pivot) < 0)
             {
-                // Increment index of
-                // smaller element
+                counter.counter += 3;                                   // array[j].compareToIgnoreCase(pivot) < 0
                 i++;
+                counter.counter += 2;                                   // i++
                 swap(array, i, j);
+                counter.counter += 8;                                   // calling swap function
             }
         }
         swap(array, i + 1, high);
+        counter.counter += 8;                                           // calling swap function
+        counter.counter += 2;                                           // return (i + 1)
         return (i + 1);
     }
 
-    /* The main function that implements QuickSort
-              arr[] --> Array to be sorted,
-              low --> Starting index,
-              high --> Ending index
-     */
-    static String[] quickSort(String[] array, int low, int high)
+    static String[] quickSort(String[] array, int low, int high, Counter counter)
     {
+        counter.counter++;                                              // low < high
         if (low < high)
         {
-            // pi is partitioning index, arr[p]
-            // is now at right place
-            int pivot = partition(array, low, high);
-            // Separately sort elements before
-            // partition and after partition
-            quickSort(array, low, pivot - 1);
-            quickSort(array, pivot + 1, high);
+            int pivot = partition(array, low, high, counter);
+            counter.counter += 2;
+            quickSort(array, low, pivot - 1, counter);
+            counter.counter += 2;
+            quickSort(array, pivot + 1, high, counter);
+            counter.counter += 2;
         }
         return array;
     }
@@ -74,11 +65,13 @@ public class QuickSort {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        String[] array = new String[100];
-        readFile(array, "wordList100.txt");
-        String[] sortedArray = quickSort(array, 0, 99);
+        Counter counter = new Counter();
+        String[] array = new String[142301];
+        readFile(array, "wordList.txt");
+        String[] sortedArray = quickSort(array, 0, 142300, counter);
         for(int i = 0; i < sortedArray.length; i++){
             System.out.println(sortedArray[i]);
         }
+        System.out.println("Number of primitive operations in quick sort is " + counter.counter);
     }
 }
