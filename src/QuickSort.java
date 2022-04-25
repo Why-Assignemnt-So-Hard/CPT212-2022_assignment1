@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class QuickSort {
-    // A utility function to swap two elements
+    //function to swap two elements
     static void swap(String[] array, int i, int j)
     {
         String temp = array[i];
@@ -23,7 +23,7 @@ public class QuickSort {
         // Index of smaller element and
         // indicates the right position
         // of pivot found so far
-        int i = (low - 1);
+        int i = low;
         for(int j = low; j <= high - 1; j++)
         {
             // If current element is smaller
@@ -32,7 +32,7 @@ public class QuickSort {
             {
                 // Increment index of
                 // smaller element
-                i++;
+                i = i + 1;
                 swap(array, i, j);
             }
         }
@@ -51,11 +51,11 @@ public class QuickSort {
         {
             // pi is partitioning index, arr[p]
             // is now at right place
-            int pi = partition(array, low, high);
+            int pivot = partition(array, low, high);
             // Separately sort elements before
             // partition and after partition
-            quickSort(array, low, pi - 1);
-            quickSort(array, pi + 1, high);
+            quickSort(array, low, pivot - 1);
+            quickSort(array, pivot + 1, high);
         }
         return array;
     }

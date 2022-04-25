@@ -2,17 +2,19 @@ import java.io.*;
 import java.util.*;
 
 public class InsertionSort {
+    //main function
     public static void main(String[] args) throws FileNotFoundException {
         Counter counter = new Counter();
-        String[] array = new String[100];
-        readFile(array, "wordList100.txt");
+        String[] array = new String[142301];
+        readFile(array, "wordList.txt");
         String[] sortedArray = insertionSort(array, array.length, counter);
         for(int i = 0; i < sortedArray.length; i++){
             System.out.println(i + 1 + ".\t" + sortedArray[i]);
         }
-        System.out.println(counter.counter);
+        System.out.println("Number of primitive operations in insertion sort is " + counter.counter);
     }
 
+    //function definition for insertion sort
     public static String[] insertionSort(String[] array, int n, Counter counter) {
         counter.counter = 1;            //int i = 1
         for (int i = 1; i < n; ++i) {
@@ -35,6 +37,7 @@ public class InsertionSort {
         return array;
     }
 
+    //function to read word from list and pass to array
     public static String[] readFile(String[] array, String fileName) throws FileNotFoundException {
         int i = 0;
         FileInputStream fis = new FileInputStream(fileName);
