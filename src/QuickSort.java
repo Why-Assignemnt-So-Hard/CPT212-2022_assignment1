@@ -23,16 +23,16 @@ public class QuickSort {
         // Index of smaller element and
         // indicates the right position
         // of pivot found so far
-        int i = low;
-        for(int j = low; j <= high - 1; j++)
+        int i = low - 1;
+        for(int j = low + 1; j <= high - 1; j++)
         {
             // If current element is smaller
             // than the pivot
-            if (array[i].compareToIgnoreCase(pivot) < 0)
+            if (array[j].compareToIgnoreCase(pivot) < 0)
             {
                 // Increment index of
                 // smaller element
-                i = i + 1;
+                i++;
                 swap(array, i, j);
             }
         }
@@ -78,7 +78,7 @@ public class QuickSort {
         readFile(array, "wordList100.txt");
         String[] sortedArray = quickSort(array, 0, 99);
         for(int i = 0; i < sortedArray.length; i++){
-            System.out.println(i + 1 + ".\t" + sortedArray[i]);
+            System.out.println(sortedArray[i]);
         }
     }
 }
