@@ -9,7 +9,7 @@ public class BubbleSort {
         readFile(array, "wordList.txt");
         String[] sortedArray = bubbleSort(array, array.length, counter);
         for(int i = 0; i < sortedArray.length; i++){
-            System.out.println(i + 1 + ".\t" + sortedArray[i]);
+            System.out.println(sortedArray[i]);
         }
         System.out.println("Number of primitive operations in bubble sort is " + counter.counter);
     }
