@@ -1,3 +1,3 @@
 public class Counter {
-    int counter = 0;
+    long counter = 0;
 }
