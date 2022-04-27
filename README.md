@@ -5,4 +5,4 @@
 2. Select the data for graph plotting  
 - Best Case    - Items in array sorted
 - Average Case - Run multiple times
-- Worst Case   - Select the largest number of primitive operations
+- Worst Case   - Items in array in descending order
