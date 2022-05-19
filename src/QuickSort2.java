@@ -11,9 +11,13 @@ public class QuickSort2 {
         readFile(list, "MYwordList.txt");
         quickSort(list, 0, list.size() - 1, counter);
         for(int i = 0; i < list.size(); i++){
-            System.out.println(list.get(i));
+            System.out.println((i + 1) + " " + list.get(i));
         }
-        System.out.println("Number of primitive operations in quick sort size of " + list.size() + " is " + counter.counter);
+        System.out.println("\n*******************************************************************");
+        System.out.println("Name of sorting algorithm: Quick sort");
+        System.out.println("Number of elements: " + list.size());
+        System.out.println("Number of primitive operations: " + counter.counter);
+        System.out.println("*******************************************************************");
     }
 
     // function to swap two elements

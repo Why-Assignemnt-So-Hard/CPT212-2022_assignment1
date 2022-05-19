@@ -8,12 +8,16 @@ public class BubbleSort2 {
     public static void main(String[] args) throws FileNotFoundException {
         Counter counter = new Counter();
         ArrayList<String> list = new ArrayList<String>();
-        readFile(list, "wordList.txt");
+        readFile(list, "MYwordList.txt");
         bubbleSort(list, list.size(), counter);
         for(int i = 0; i < list.size(); i++){
-            System.out.println(list.get(i));
+            System.out.println((i + 1) + " " + list.get(i));
         }
-        System.out.println("Number of primitive operations in bubble sort is " + counter.counter);
+        System.out.println("\n*****************************************************");
+        System.out.println("Name of sorting algorithm: Bubble sort");
+        System.out.println("Number of elements: " + list.size());
+        System.out.println("Number of primitive operations: " + counter.counter);
+        System.out.println("*****************************************************");
     }
 
     // function definition for bubble sort
