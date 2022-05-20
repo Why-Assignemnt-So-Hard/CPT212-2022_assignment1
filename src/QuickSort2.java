@@ -8,12 +8,16 @@ public class QuickSort2 {
     public static void main(String[] args) throws FileNotFoundException {
         Counter counter = new Counter();
         ArrayList<String> list = new ArrayList<String>();
-        readFile(list, "wordList.txt");
+        readFile(list, "MYwordList.txt");
         quickSort(list, 0, list.size() - 1, counter);
         for(int i = 0; i < list.size(); i++){
-            System.out.println(list.get(i));
+            System.out.println((i + 1) + " " + list.get(i));
         }
-        System.out.println("Number of primitive operations in quick sort is " + counter.counter);
+        System.out.println("\n*******************************************************************");
+        System.out.println("Name of sorting algorithm: Quick sort");
+        System.out.println("Number of elements: " + list.size());
+        System.out.println("Number of primitive operations: " + counter.counter);
+        System.out.println("*******************************************************************");
     }
 
     // function to swap two elements
@@ -27,12 +31,12 @@ public class QuickSort2 {
     // function to determine partitionIns
     static int partition(ArrayList<String> list, int low, int high, Counter counter)
     {
-        String pivot = list.get(high);
+        String pivot = list.get(low);
         counter.counter += 2;                                           // String pivot = list.get(high)
-        int i = low - 1;
+        int i = low;
         counter.counter += 2;                                           // int i = low - 1
-        counter.counter += 2;                                           // int j = low + 1
-        for(int j = low + 1; j <= high - 1; j++)
+        counter.counter += 1;                                           // int j = low
+        for(int j = low + 1; j <= high; j++)
         {
             counter.counter += 4;                                       // j <= high - 1 and j++
             if (list.get(j).compareToIgnoreCase(pivot) < 0)
@@ -44,7 +48,7 @@ public class QuickSort2 {
                 counter.counter += 6;                                   // calling swap function
             }
         }
-        swap(list, i + 1, high);
+        swap(list, i , low);
         counter.counter += 6;                                           // calling swap function
         counter.counter += 2;                                           // return (i + 1)
         return (i + 1);
@@ -66,7 +70,7 @@ public class QuickSort2 {
     }
 
     // function to read word from list and pass to array list
-    public static ArrayList<String> readFile(ArrayList<String> list, String fileName) throws FileNotFoundException {
+    public static void readFile(ArrayList<String> list, String fileName) throws FileNotFoundException {
         int i = 0;
         FileInputStream file = new FileInputStream(fileName);
         Scanner input = new Scanner(file);
@@ -75,7 +79,5 @@ public class QuickSort2 {
             i++;
         }
         input.close();
-        return list;
     }
 }
-
