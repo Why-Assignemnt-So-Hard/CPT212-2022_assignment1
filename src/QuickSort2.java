@@ -31,12 +31,12 @@ public class QuickSort2 {
     // function to determine partitionIns
     static int partition(ArrayList<String> list, int low, int high, Counter counter)
     {
-        String pivot = list.get((high + low) / 2);
+        String pivot = list.get(low);
         counter.counter += 2;                                           // String pivot = list.get(high)
-        int i = low - 1;
+        int i = low;
         counter.counter += 2;                                           // int i = low - 1
-        counter.counter += 2;                                           // int j = low + 1
-        for(int j = low + 1; j <= high - 1; j++)
+        counter.counter += 1;                                           // int j = low
+        for(int j = low + 1; j <= high; j++)
         {
             counter.counter += 4;                                       // j <= high - 1 and j++
             if (list.get(j).compareToIgnoreCase(pivot) < 0)
@@ -48,7 +48,7 @@ public class QuickSort2 {
                 counter.counter += 6;                                   // calling swap function
             }
         }
-        swap(list, i + 1, high);
+        swap(list, i , low);
         counter.counter += 6;                                           // calling swap function
         counter.counter += 2;                                           // return (i + 1)
         return (i + 1);
