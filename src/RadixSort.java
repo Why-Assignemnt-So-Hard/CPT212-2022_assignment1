@@ -8,20 +8,22 @@ public class RadixSort {
     public static void main(String[] args) throws FileNotFoundException {
         Counter counter = new Counter();
         ArrayList<String> list = new ArrayList<String>();
-        readFile(list, "D:\\Y 2 S 2\\CPT212\\Assignment1\\CPT212-2022_assignment1\\wordList.txt");
+        readFile(list, "MYwordList.txt");
         int max = getMaxCharacters(list, list.size());
-
         for (int index = max - 1; index >= 0; --index) {
             countingSort(list, list.size(), index, counter);
         }
-
         for(int i = 0; i < list.size(); i++){
             System.out.println(list.get(i));
         }
-        System.out.println("Number of primitive operations in bubble sort is " + counter.counter);
+        System.out.println("\n*****************************************************");
+        System.out.println("Name of sorting algorithm: Radix sort");
+        System.out.println("Number of elements: " + list.size());
+        System.out.println("Number of primitive operations: " + counter.counter);
+        System.out.println("*****************************************************");
     }
 
-    // Function to get the largest number of characters in a string from stringData array
+    // function to get the largest number of characters in a string from stringData array
     public static int getMaxCharacters(ArrayList<String> list, int size) {
         //Initializing the length of first string in array as the largest number of characters in a string
         int maxCharac = list.get(0).length();
@@ -31,6 +33,7 @@ public class RadixSort {
         return maxCharac;
     }
 
+    // function definition for counting sort
     public static void countingSort(ArrayList<String> list, int size, int index, Counter counter) {
 
         // Declare a temporary array to store the sorted output
@@ -43,7 +46,7 @@ public class RadixSort {
 
         // Set count to 0
         counter.counter += 1;           // i = 0
-        for(int i = 0; i < 144697;i++) {
+        for(int i = 0; i < 144697; i++) {
             counter.counter += 3;       // i < 144697 and i++
             count[i] = 0;
             counter.counter += 2;       // count[i] = 0
@@ -102,12 +105,10 @@ public class RadixSort {
             list.set(i, output[i]);
             counter.counter += 2;       // list.set(i, output[i])
         }
-        counter.counter += 2; // i = size and exit for loop
+        counter.counter += 2;           // i = size and exit for loop
     }
 
-
     // function to read word from list and pass to array list
-
     public static void readFile(ArrayList<String> list, String fileName) throws FileNotFoundException {
         int i = 0;
         FileInputStream file = new FileInputStream(fileName);
@@ -119,5 +120,3 @@ public class RadixSort {
         input.close();
     }
 }
-
-
