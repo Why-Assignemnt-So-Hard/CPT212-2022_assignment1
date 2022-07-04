@@ -18,13 +18,13 @@ From the graph, the curve of the worst case and average case show quadratic grow
 
 ## 2. QUICK SORT
 ### 2.1 Result
-![2022-07-03 15_51_38-CPT212_ASSIGNMENT1_LSD_LZX_KKR_LPS - Google Docs and 11 more pages - Personal - ](https://user-images.githubusercontent.com/64214479/177030726-03e5f4ca-8546-467e-8f67-ec1501c85a99.png)
+![2022-07-03 15_55_20-CPT212_ASSIGNMENT1_LSD_LZX_KKR_LPS - Google Docs and 11 more pages - Personal - ](https://user-images.githubusercontent.com/64214479/177086839-9e12170e-7434-4dba-b498-99fc5034c0ea.png)
 
 ### 2.2 Graph
-![2022-07-03 15_51_53-CPT212_ASSIGNMENT1_LSD_LZX_KKR_LPS - Google Docs and 11 more pages - Personal - ](https://user-images.githubusercontent.com/64214479/177030736-117409e8-5c1e-47c4-9186-d7bf678b783a.png)
+![2022-07-03 15_55_32-CPT212_ASSIGNMENT1_LSD_LZX_KKR_LPS - Google Docs and 11 more pages - Personal - ](https://user-images.githubusercontent.com/64214479/177086847-7625a7ec-782f-4a47-afcb-32f7862aee32.png)
 
 ### 2.3 Time Complexity
-![2022-07-03 15_52_04-CPT212_ASSIGNMENT1_LSD_LZX_KKR_LPS - Google Docs and 11 more pages - Personal - ](https://user-images.githubusercontent.com/64214479/177030741-0e560d0e-9a60-4eaa-8577-ddabb9b4a2f9.png)
+![2022-07-03 15_55_44-CPT212_ASSIGNMENT1_LSD_LZX_KKR_LPS - Google Docs and 11 more pages - Personal - ](https://user-images.githubusercontent.com/64214479/177086850-cad6b9e9-add4-4bc2-b9ba-081c7c0ec510.png)
 
 According to the graph, the first element has been selected as pivot in the quick sort. The best case time complexity of quick sort is obtained under the condition that all the elements in the array list are arranged randomly while the average case time complexity of quick sort is obtained under the condition that all the elements in the array list are sorted in alphabetical order. Then, the worst case time complexity of quick sort is obtained under the condition that all the elements in the array list are sorted in descending alphabetical order. 
 
