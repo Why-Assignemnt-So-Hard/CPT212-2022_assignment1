@@ -6,9 +6,21 @@ The program is required to implement insertion, bubble, quick and radix sort alg
 
 ## Table of content
 * [1. BUBBLE SORT](#1.-bubble-sort)
-* [2. QUICK SORT](#2. QUICK SORT)
-* [3. INSERTION SORT](#3. INSERTION SORT)
-* [4. RADIX SORT](#4. RADIX SORT)
+** [1.1 Result](#1.1-result)
+** [1.2 Graph](#1.2-graph) 
+** [1.3 Time Complexity](#1.3-time-complexity) 
+* [2. QUICK SORT](#2.-quick-sort)
+** [2.1 Result](#2.1-result)
+** [2.2 Graph](#2.2-graph) 
+** [2.3 Time Complexity](#2.3-time-complexity) 
+* [3. INSERTION SORT](#3.-insertion-sort)
+** [3.1 Result](#3.1-result)
+** [3.2 Graph](#3.2-graph) 
+** [3.3 Time Complexity](#3.3-time-complexity) 
+* [4. RADIX SORT](#4.-radix-sort)
+** [4.1 Result](#4.1-result)
+** [4.2 Graph](#4.2-graph) 
+** [4.3 Time Complexity](#4.3-time-complexity) 
 
 ## 1. BUBBLE SORT
 ### 1.1 Result
