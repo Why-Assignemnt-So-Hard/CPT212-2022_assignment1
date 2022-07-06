@@ -4,12 +4,6 @@
 
 The program is required to implement insertion, bubble, quick and radix sort algorithms on a list of words in lexicographic order
 
-## Table of content
-* [1. BUBBLE SORT](#1.-bubble-sort)
-* [2. QUICK SORT](#2.-quick-sort)
-* [3. INSERTION SORT](#3.-insertion-sort)
-* [4. RADIX SORT](#4.-radix-sort)
-
 ## 1. BUBBLE SORT
 ### 1.1 Result
 ![2022-07-03 15_51_38-CPT212_ASSIGNMENT1_LSD_LZX_KKR_LPS - Google Docs and 11 more pages - Personal - ](https://user-images.githubusercontent.com/64214479/177030621-4010e047-c5d8-4d75-8cf6-efad37200ff9.png)
