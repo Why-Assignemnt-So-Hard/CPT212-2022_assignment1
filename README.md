@@ -5,7 +5,7 @@
 The program is required to implement insertion, bubble, quick and radix sort algorithms on a list of words in lexicographic order
 
 ## Table of content
-* [1. BUBBLE SORT](#1. BUBBLE SORT)
+* [1. BUBBLE SORT](#1. bubble sort)
 * [2. QUICK SORT](#2. QUICK SORT)
 * [3. INSERTION SORT](#3. INSERTION SORT)
 * [4. RADIX SORT](#4. RADIX SORT)
