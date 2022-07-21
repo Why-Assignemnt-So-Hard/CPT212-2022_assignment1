@@ -1,5 +1,7 @@
 # CPT212-2022_assignment1
 
+---
+
 The program is required to implement insertion, bubble, quick and radix sort algorithms on a list of words in lexicographic order
 
 ## 1. BUBBLE SORT
